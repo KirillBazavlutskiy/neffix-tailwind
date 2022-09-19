@@ -1,0 +1,4 @@
+.container {
+    @apply grid gap-10 grid-cols-2 grid-rows-2 p-10
+    bg-gradient-to-br from-blue-500 to-pink-500;
+}

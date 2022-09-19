@@ -1,0 +1,16 @@
+.container {
+  @apply w-full h-16 px-10 bg-indigo-300 border-white border-b-2
+  flex justify-between items-center;
+
+  h1 {
+    @apply text-black font-bold text-2xl;
+  }
+
+  button {
+    @apply text-white bg-black font-bold text-lg py-1 px-7
+    border-2 border-white transition-colors;
+  }
+  button:hover {
+    @apply text-black bg-white border-black transition-colors;
+  }
+}
