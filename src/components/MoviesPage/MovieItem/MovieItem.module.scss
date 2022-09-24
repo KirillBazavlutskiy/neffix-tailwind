@@ -1,0 +1,54 @@
+.item {
+    @apply bg-gray-700 p-1 transition-all
+    border-black border-2
+    flex justify-between items-center;
+
+    &:hover {
+        box-shadow: 5px 5px #000;
+        @apply bg-yellow-200;
+
+        img {
+            @apply border-black;
+        }
+
+        .text {
+            h1 { 
+                @apply text-black;
+            }
+
+            p { 
+                @apply text-black;
+            }
+        }
+    }
+
+    img {
+        @apply border-white border-4 hidden
+        sm:block;
+    }
+
+    .text {
+        height: 150px;
+        @apply text-white p-2 w-full text-center
+        flex flex-col justify-center items-center;
+
+        h1 { 
+            @apply font-bold text-xl transition-all mb-4
+        }
+
+        p { 
+            @apply font-semibold text-base transition-all mb-4
+        }
+
+        button {
+            @apply font-bold text-lg py-1 px-3 transition-all
+            bg-white border-black border-2 text-black;
+
+            &:hover {
+                @apply text-white text-xl
+                bg-gradient-to-r from-orange-400 to-yellow-500;
+                box-shadow: 3px 3px #000;
+            }
+        }
+    }
+}

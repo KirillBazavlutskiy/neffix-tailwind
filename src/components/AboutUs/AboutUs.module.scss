@@ -1,0 +1,48 @@
+.container {
+	min-height: calc(100vh - 9rem);
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+		'a a b'
+		'c d b'
+		'c d g';
+	@apply p-4 w-screen
+    bg-gradient-to-br from-blue-300 to-purple-300;
+
+	.item {
+		@apply bg-white transition-all p-4 font-bold
+        border-inherit border-4;
+
+		&:hover {
+			box-shadow: 6px 6px #000;
+			@apply bg-purple-300
+            border-black;
+		}
+	}
+
+	.item:nth-child(1) {
+		grid-area: a;
+		@apply text-2xl;
+	}
+
+	.item:nth-child(2) {
+		grid-area: b;
+		@apply text-4xl;
+	}
+
+	.item:nth-child(3) {
+		grid-area: c;
+		@apply text-xl;
+	}
+
+	.item:nth-child(4) {
+		grid-area: d;
+		@apply text-2xl;
+	}
+
+	.item:nth-child(5) {
+		grid-area: g;
+		@apply text-xl;
+	}
+}

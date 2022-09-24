@@ -1,29 +1,48 @@
 .container {
+	height: 600px;
+	overflow: hidden;
+	@apply relative
+    flex flex-col w-full border-b-8 border-black
+		bg-gradient-to-tr from-purple-700 to-blue-500 justify-center items-center
+		text-white;
 
-  height: 600px;
-  @apply flex flex-col w-full border-b-8 border-black
-  bg-gradient-to-tr from-violet-500 to-blue-500
-  justify-center items-center text-white;
+	&:hover {
+		.secondBackground {
+			transform: translateY(0);
+		}
+	}
 
-  .inner {
-    width: 600px;
-    height: 350px;
-    box-shadow: 6px 6px 1px black;
-    @apply bg-white flex flex-col p-6
+	.inner {
+		width: 600px;
+		height: 350px;
+		box-shadow: 5px 5px #000;
+		@apply bg-white flex flex-col p-6 z-20
+    border-black border-2 transition-all
     items-center text-center;
 
-    h2 {
-      @apply text-black font-bold text-3xl my-3;
-    }
-  
-    button {
-      @apply text-white font-bold bg-black mt-8 py-2 px-12
+		&:hover {
+			box-shadow: 8px 8px #000;
+		}
+
+		h2 {
+			@apply text-black font-bold text-3xl my-3;
+		}
+
+		.watch {
+			@apply text-white font-bold bg-black mt-8 py-2 px-12
       border-2 border-white transition-all;
-    }
-    button:hover {
-      @apply bg-gradient-to-r from-purple-500 to-cyan-500
-      border-black text-xl;
-      box-shadow: 3px 3px 1px black
-    }
-  }
+
+			&:hover {
+				box-shadow: 4px 4px black;
+				@apply bg-gradient-to-r from-purple-500 to-cyan-500
+        border-black text-xl;
+			}
+		}
+	}
+	.secondBackground {
+		height: 600px;
+		transform: translateY(600px);
+		@apply absolute w-full z-10 bg-gradient-to-t from-orange-300 to-yellow-300
+    transition-all;
+	}
 }
